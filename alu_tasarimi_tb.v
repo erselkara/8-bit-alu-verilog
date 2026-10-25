@@ -26,9 +26,9 @@ module alu_tasarimi_tb;
     );
 
     initial begin
-        // -----------------------------------------------------------------
+        
         // 1. BÖLÜM: Tam 8-Bit Toplama Matrisi (0'dan 255'e kadar tüm ihtimaller)
-        // -----------------------------------------------------------------
+        
         $display("--- 8-Bit Tam Toplama Matrisi Basliyor (256x256) ---");
         for (i = 0; i < 256; i = i + 1) begin
             for (j = 0; j < 256; j = j + 1) begin
@@ -78,10 +78,10 @@ module alu_tasarimi_tb;
             end
         end
 
-        // -----------------------------------------------------------------
+        
         // 3. BÖLÜM: Rastgele Stres Testi (1000 Adım)
-        // -----------------------------------------------------------------
-        $display("--- Rastgele Stres Testi Basliyor ---");
+       
+        $display(" Rastgele  Test  ");
         for (i = 0; i < 1000; i = i + 1) begin
             a = $urandom_range(0, 255);
             b = $urandom_range(0, 255);
@@ -89,7 +89,6 @@ module alu_tasarimi_tb;
             sel = $urandom_range(0, 8); // 0 ile 8 arası tüm ALU fonksiyonları
             #1;
             
-            // Fonksiyonların doğruluğunu MUX seçimine göre denetle
           
             pass_count = pass_count + 1; 
         end
